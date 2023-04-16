@@ -1,0 +1,167 @@
+// Import all of Bootstrap's CSS
+$primary: #1abc9c;
+$secondary: #2c3e50;
+
+$nav-link-color: #fff;
+$navbar-light-color: #fff;
+$navbar-light-hover-color: $primary;
+$navbar-light-brand-color: #fff;
+
+$form-floating-input-padding-t: 3rem;
+$form-floating-input-padding-b: 2rem;
+
+$input-font-size: 1.5rem;
+$form-floating-input-padding-t: 3.5rem;
+
+$input-height: 10rem;
+
+$input-focus-box-shadow: red;
+
+
+// GLOBAL SELECTOR
+section {
+  @include padding(3rem 5rem);
+  text-align: center;
+}
+
+main section:nth-child(odd) {
+  background-color: #fff;
+  color: $secondary;
+
+  .d-right, .d-left {
+    background-color: $secondary;
+  }
+}
+
+main section:nth-child(even) {
+  background-color: $primary;
+  color: #fff;
+
+  .d-right, .d-left {
+    background-color: #fff;
+  }
+}
+
+.d-right, .d-left {
+  width: 7rem;
+  height: 0.25rem;
+}
+
+h1 {
+  @extend .text-uppercase;
+  @extend .my-3;
+}
+
+p {
+  @include font-size(1.3rem);
+  @include margin-bottom(3rem);
+}
+
+.py-lg {
+  @include padding-top(5rem);
+  @include padding-bottom(5rem);
+}
+
+.btn-social {
+  border-radius: 100%;
+  display: inline-flex;
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 2rem;
+}
+
+
+// NAVBAR SECTION
+// ***********************
+.navbar {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+}
+
+// HEADER SECTION
+// ***********************
+.header {
+  padding-top: calc(6rem + 104px);
+  color: #fff;
+
+  .d-right, .d-left {
+    background-color: #fff;
+  }
+
+  img {
+    width: 15rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+
+    @include media-breakpoint-down("md") {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    margin-top: 1.8rem;
+  }
+
+  i {
+    color: #fff;
+  }
+}
+
+
+// PRO SECTION
+// ***********************
+.pro-section {
+
+  .box {
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    @extend .shadow-lg;
+    @extend .rounded-2;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & i {
+      opacity: 0;
+      font-size: 5rem;
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: $primary;
+      opacity: 0.9;
+
+      & i {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.about-section {
+  .about-button {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
